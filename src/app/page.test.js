@@ -10,4 +10,12 @@ describe("Page", () => {
 
     expect(heading).toBeInTheDocument();
   });
+
+  it("renders a link", () => {
+    render(<Home />);
+
+    const link = screen.getByRole("link");
+
+    expect(link).toBeInTheDocument();
+  });
 });
